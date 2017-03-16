@@ -755,6 +755,9 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
       photo = null;
     }
 
+    // Delete the old temp file.
+    new File(realPath).delete();
+
     return f;
   }
 
